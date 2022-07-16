@@ -8,7 +8,7 @@
 ，前身是 [tzhuan](http://github.com/tzhuan) 的
 [臺灣大學碩博士論文 XeLaTeX 模板](https://github.com/tzhuan/ntu-thesis)。 <br>
 由 [walker088](https://github.com/Walker088) 在撰寫論文期間根據[政大圖書館](http://www.lib.nccu.edu.tw/thesis/download.html) 所提供的論文格式規範加以修改。
-最後在經過余盈蓓跟標云根據政大語言所的規定進行修改。
+最後在經過[余盈蓓](https://github.com/FishInBed)跟標云根據政大語言所的規定進行修改。
 
 下載
 ----------
