@@ -1,0 +1,168 @@
+\chapter{Results}
+\label{c:result}
+
+\section{Glossing}
+
+% 有翻譯的glossing
+
+% 1 The \ex line remains empty
+% 2 use \gll and write your example in that line; end it with \\
+% 3 write the glosses, and end this line with \\;
+% 4 optionally, give a translation \glt.
+
+\begin{exe}
+\ex
+\gll Jeder Bauer, der einen Esel besitzt, schlägt ihn. \\
+every farmer that a.\textsc{acc} donkey owns beats it.\textsc{acc}\\ \glt `Every farmer who owns a donkey beats it.' \hfill \textcite{geach1962reference}
+% 用\glt表示要翻譯
+\label{ex1}
+\end{exe}
+
+% 這是四層的glossing
+% The \kill line contains the longest word across each language translation to mark the tabbing points with \=
+
+\begin{singlespacing} % 改成單行間句
+\begin{exe}
+    \ex \begin{tabbing}
+      give \= dem Hunde \= das Essen \kill
+      gef \> hundinum \> matinn \\
+      gje \> hunden \> maten\\
+      give \> the dog \> the food \\
+      gib \> dem Hunde \> das Essen
+    \end{tabbing}
+    \label{ex2}
+\end{exe}
+\end{singlespacing}
+
+% Use curly brackets to group elements that are being glossed as a unit
+% \\ 表示換行
+
+\begin{exe} \ex
+\gll {Multiword expression} -s can be glossed too.\\ Mehrwortlexem -e.\textsc{pl} können sein glossiert auch\\ \glt `Auch Mehrwortlexeme können glossiert werden.'
+\ex
+\gll dass Peter$_{1}$ $t_{1}$ $t_{2}$ schläft$_{2}$\\ that Peter {} {} sleeps\\
+\glt `that Peter is sleeping'
+\end{exe}
+
+% 很長的例子可以直接打，latex會自動分行          
+\begin{singlespacing}
+\begin{exe}
+\ex
+\gll Jones buttered the toast slowly, deliberately, in the bathroom, with a knife, at midnight.\\
+Jones {bestrich mit Butter} den Toast langsam absichtlich in dem Bad mit einem Messer um Mitternacht.\\
+\glt `Jones bestrich den Toast mit Butter absichtlich um Mitternacht langsam mit einem Messer im Bad.'
+\end{exe}
+\end{singlespacing}
+
+
+\section{Examples}
+\subsection{Basic Ones}
+
+    \begin{enumerate}[label= (\arabic*)] %單純舉例用這個，如果希望是字母編號的話，把 \arabic改成 \alph 就行。
+            \item 國內COVID-19（2019冠狀病毒疾病）\underline{\textbf{疫情未歇}}，．．．(\href{https://www.cna.com.tw/news/ahel/202206010196.aspx}{中央社 2022.06.03}) \\
+            %換行記得用\\
+            The \textbf{epidemic} has not \textbf{stopped}...
+            \item 以染疫率可判斷未來\underline{\textbf{疫情走向}}，．．．(\href{https://www.cna.com.tw/news/ahel/202206010309.aspx}{中央社 2022.06.01}) \\
+            The infected ratio can be used to determine the future \textbf{trend} of the \textbf{epidemic}.
+    \end{enumerate}
+
+
+    \begin{enumerate}[resume, label = (\arabic*)] %如果想繼續編號要加上resume
+        \item \hypertarget{sixteenth}{雖全國\underline{\textbf{疫情處在高原末期}}，．．．}(\href{https://www.cna.com.tw/news/ahel/202206040137.aspx}{中央社 2022.06.04}) \\
+        Although the \textbf{epidemic} in Taiwan is at \textbf{the end of the plateau period}...
+        \item 孤立的北韓持續在對抗這\underline{\textbf{一波}}空前的\underline{\textbf{COVID-19疫情}}，．．． (\href{https://www.cna.com.tw/news/aopl/202205290137.aspx}{中央社 2022.05.29}) \\
+        North Korea, which is isolated, keeps on fighting against the unprecedented \textbf{wave of epidemic}...
+        \item 高雄自去年開始\underline{\textbf{歷經一些疫情}}，．．． (\href{https://www.cna.com.tw/news/aloc/202206030194.aspx}{中央社 2022.06.03}) \\
+        Kaohsiung has \textbf{experienced some epidemic} sine last year...
+    \end{enumerate}
+
+\subsection{Nested Ones}    
+      
+    \begin{enumerate}[resume, label = (\arabic*)] 
+        \item \ 
+            \begin{enumerate}[label = \alph*.]
+                \item \hypertarget{sixteenth}{雖全國\underline{\textbf{疫情處在高原末期}}，．．．}(\href{https://www.cna.com.tw/news/ahel/202206040137.aspx}{中央社 2022.06.04}) \\
+                Although the \textbf{epidemic} in Taiwan is at \textbf{the end of the plateau period}...
+                \item 孤立的北韓持續在對抗這\underline{\textbf{一波}}空前的\underline{\textbf{COVID-19疫情}}，．．． (\href{https://www.cna.com.tw/news/aopl/202205290137.aspx}{中央社 2022.05.29}) \\
+                North Korea, which is isolated, keeps on fighting against the unprecedented \textbf{wave of epidemic}...
+                \item 高雄自去年開始\underline{\textbf{歷經一些疫情}}，．．． (\href{https://www.cna.com.tw/news/aloc/202206030194.aspx}{中央社 2022.06.03}) \\
+                Kaohsiung has \textbf{experienced some epidemic} sine last year...
+            \end{enumerate}
+        \item \ 
+            \begin{enumerate}[label = \alph*.]
+               \item \hypertarget{sixteenth}{雖全國\underline{\textbf{疫情處在高原末期}}，．．．}(\href{https://www.cna.com.tw/news/ahel/202206040137.aspx}{中央社 2022.06.04}) \\
+                Although the \textbf{epidemic} in Taiwan is at \textbf{the end of the plateau period}...
+                \item 孤立的北韓持續在對抗這\underline{\textbf{一波}}空前的\underline{\textbf{COVID-19疫情}}，．．． (\href{https://www.cna.com.tw/news/aopl/202205290137.aspx}{中央社 2022.05.29}) \\
+                North Korea, which is isolated, keeps on fighting against the unprecedented \textbf{wave of epidemic}...
+                \item 高雄自去年開始\underline{\textbf{歷經一些疫情}}，．．． (\href{https://www.cna.com.tw/news/aloc/202206030194.aspx}{中央社 2022.06.03}) \\
+                Kaohsiung has \textbf{experienced some epidemic} sine last year...
+            \end{enumerate}
+    \end{enumerate}
+    
+\section{Lists}
+    \begin{itemize}
+    \item Hello, here is some text without a meaning. Hello, here is some text without a meaning.
+       \begin{itemize}
+          \item Hello, here is some text without a meaning. Hello, here is some text without a meaning.
+            \begin{itemize}
+            \item Hello, here is some text without a meaning. Hello, here is some text without a meaning.
+            \end{itemize}
+       \item Hello, here is some text without a meaning. Hello, here is some text without a meaning.
+       \end{itemize}
+    \item Hello, here is some text without a meaning. Hello, here is some text without a meaning.
+    \end{itemize}
+
+\section{Equations}
+
+更多數學公式的詳細寫法：\href{https://reurl.cc/o1okED}{https://reurl.cc/o1okED}
+
+The calculation of accuracy is 
+\begin{math}
+\frac{True Positive + True Negative}{N}
+\end{math} % 行內數學公式
+, so it can be observed that accuracy may become unreliable when the data is unbalanced.\par
+
+You can also write the equations with numbers and refer them in texts. For example, \autoref{eq:2} shows how the precision score is calculated. 
+\begin{equation} % 要標號的數學公式
+    Accuracy = \frac{TP+TN}{TP+FP+FN+TN}
+    \label{eq:1}
+\end{equation}
+
+\begin{equation}
+    Precision = \frac{TP}{TP+FP}
+    \label{eq:2}
+\end{equation}
+
+\begin{equation}
+    Recall = \frac{TP}{TP+FN}
+    \label{eq:3}
+\end{equation}
+
+\begin{equation}
+    F1 = 2\times \frac{Precision}{Precision+Recall}
+    \label{eq:4}
+\end{equation}
+
+\clearpages
+
+\section{Trees}
+There is a tree in \autoref{i:tree}.
+
+% 畫樹
+
+\begin{figure}[!htbp]
+\centering
+\tikzset{every tree node/.style={align=center},
+    level distance=40pt,
+    sibling distance=6pt}
+    
+\begin{tikzpicture}[scale=.5]
+ \Tree [.VP2 [.\textbf{Agent} ] 
+ [.V$'$ [.CAUSE ] 
+ [.VP1 [.\textbf{Theme} ] [.V$'$ [.BECOME ] 
+ [.\textit{predicate} ] ] ] ] ]
+\end{tikzpicture}
+
+\caption{The structure of transitive verbs}
+\label{i:tree}
+\end{figure}

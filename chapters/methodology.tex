@@ -1,0 +1,37 @@
+\chapter{Methodology}
+\label{c:methodology}
+
+\section{Labels and In-text References}
+
+Sometimes it becomes very confused for people to count the number of tables, figures, and examples. Therefore, to make the process less confusing, we can use `autoref' to help us label them in our texts. For example, \autoref{i:bib1} shows how to generate BibTeX from Google scholar. %使用autoref在大括號裡面輸入圖片、表格或例子的label就可以讓系統自動幫你數數並辨識他是圖片或表格，還建立好連結了（可以把滑鼠一道pdf檔裡的Figure2.1上面點點看）。
+This function can even help you refer to different chapters. For instance, the way to draw tables in \LaTeX \ \ environments will be introduced in \autoref{c:methodology}. \par
+
+Finally, if you want to include a hyperlink into your thesis, you can use the `href' function and look for more adaptions such as the colors of the links in \href{https://www.overleaf.com/learn/latex/Hyperlinks}{Overleaf's official instructions}.
+% 超連結的使用方法：\href{連結網址}{希望連結顯示的文字}
+
+\section{Tables}
+
+The performance metrics of the models are shown in \autoref{t:performance}. \par
+
+
+\begin{table}[h]
+    \centering
+    \caption{Model Performance} % 表格標題，會顯示在正文裡面。如果希望表格標題在表格下方，請把這行移到\endtabular後面
+    \label{t:performance} % 表格標籤，只是用來做文內引用的。一樣可使用\autoref{}引用
+    \begin{tabular}{lllll}
+        \toprule
+        \multirow{2}{*}[-1em]{Models} & \multicolumn{3}{c}{Metric 1} & Metric 2\\
+        \cmidrule{2-4} \cmidrule{5-5} \\
+        {} & precision & recall & F-score  & p-value \\
+        \midrule
+        model 1 & 0.67  & 0.8 & 0.729  & < 0.001 \\
+        model 2 & 0.8 & 0.9 & 0.847 & < 0.001 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+As \autoref{t:performance} shows, model 2 performs better with the F-score up to 0.8.
+
+%設定表格之細節請參考網站
+\href{https://jdhao.github.io/2019/08/27/latex_table_with_booktabs/}{表格細節設定連結}\par
+\href{https://www.tablesgenerator.com/}{表格轉換程式碼連結}

@@ -1,0 +1,138 @@
+\documentclass[oneside,AutoFakeBold]{nccuthesis} %如果要撰寫中文論文，請在[oneside]後面加上[zh]即可
+
+\usepackage{times}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{pdfpages} % include outside .pdf
+\usepackage{wallpaper} % watermark
+\usepackage{etoolbox}
+\usepackage{enumitem}
+
+
+% for table generate
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{multicol}
+\usepackage{multirow}
+
+% Format the refs
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex} % 想換成其他引用格式的話，請參考https://www.overleaf.com/learn/latex/Biblatex_citation_styles的指示，把style=apa換成你需要的格式。例：如果要用MLA就換成style=mla。
+\addbibresource{bibliography.bib}
+\usepackage[hidelinks]{hyperref}
+
+%文內的各種連結都可以設定顏色
+%這個只是示範用，學校的規定應該都是要用黑色的
+%\hypersetup{
+    %colorlinks = true, % 設定連結的顏色
+    %linkcolor= black, % 文內連結
+    %citecolor = magenta, % citation連結的顏色
+    %urlcolor=blue % 超連結的顏色
+%}
+
+% For the tree
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+
+% For barchart
+\usepackage{pgfplots}
+
+% Using the tex-text mapping for ligatures etc.
+\defaultfontfeatures{Mapping=tex-text}
+
+% Set the default fonts
+\setmainfont{Times New Roman}
+\setCJKmainfont{TW-Kai}
+
+% For glossing
+\usepackage{gb4e}
+\usepackage{langsci-gb4e}
+\newcommand{\pream}[1]{#1:\\[-4.5ex]} % for preamble lines, supplies a colon and removes some vertical space
+\newcommand{\pglt}{\vspace*{-2ex}\glt} % for use in examples that have a preamble
+
+
+% Your information goes here
+\input{title}
+\pgfplotsset{compat=1.14}
+\begin{document}
+
+% 政大論文浮水印
+\input{with-watermark.tex} % 如果不需要浮水印可以將此行刪除
+
+\hypersetup{pageanchor=false}
+
+\frontmatter
+\makecover
+
+\clearpages
+
+
+% generate certification
+% \makecertification
+% or include scanned pdf
+\addcontentsline{toc}{chapter}{口試委員會審定書}
+\includepdf[pages={1}]{pdfs/cert.pdf} % 請把pdfs這個資料夾中的cert檔按刪掉，將自己口試委員會審定書的pdf檔命名為cert上傳到該資料夾中即可完成這個頁面的設定。
+\clearpage
+
+
+\setcounter{page}{1}
+\hypersetup{pageanchor=true}
+\pagenumbering{roman}
+\phantomsection
+
+\input{copyright}
+\clearpage
+
+\input{acknowledgements}
+
+
+% Table of Content
+\clearpages
+\tableofcontents % 生成目錄，如果希望可以呈現到標題第二層就好的話，就到nccuthesis.cls的第126行把2改成3
+\addcontentsline{toc}{chapter}{Table of Contents}
+% List of Figures
+\clearpages
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+% List of Tables
+\clearpages
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+
+
+% Abstract
+
+\input{abstract}
+\mainmatter
+
+% Your thesis goes here
+
+\input{chapters/introduction} % 匯入緒論
+\input{chapters/literature} % 匯入文獻回顧
+\input{chapters/methodology} % 匯入研究方法
+\input{chapters/results} % 匯入結果
+\input{chapters/discussion} % 匯入討論
+\input{chapters/conclusion} % 匯入結論
+
+% 想要匯入自己加的新章節就打\input{chapters\檔案名}，章節會以這邊input的順序呈現，所以請視個人需要調整。
+
+\backmatter
+
+\clearpages
+\phantomsection
+\addcontentsline{toc}{chapter}{References}
+
+
+% Your bibliography goes here
+\printbibliography[title=References]
+
+
+\input{appendix/appendix_a} 
+% 把附錄引進來，如果還有其他附錄檔案就複製這行程式碼到下一行然後把大括號裡面檔名的部分進行修改即可。
+\end{document}
